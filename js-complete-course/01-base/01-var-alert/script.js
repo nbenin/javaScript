@@ -10,8 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-    let whatever = "hello world!!!";
-    alert(whatever);
+    let niceFunction = "hello world!!!";
+    alert(niceFunction);
     // your code here
 
 })();
