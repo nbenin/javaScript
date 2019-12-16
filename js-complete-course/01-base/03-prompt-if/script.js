@@ -12,5 +12,13 @@
 (function() {
 
   // your code here
+    let userWantsCake = prompt("Do you want some cake? type Yes or No.");
+
+    if (userWantsCake == "Yes" || userWantsCake == "Y" || userWantsCake == "y" || userWantsCake == "yes") {
+        alert("Congratulations, you get cake!");
+    }
+    else {
+        alert("More cake for me then! :P");
+    }
 
 })();
