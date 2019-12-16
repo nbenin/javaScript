@@ -14,5 +14,44 @@ function test() {
 }
 
 (function() {
+    document.getElementsByTagName("button").onclick() {
+        switch() {
+            case "+":
+                let firstArgument = document.getElementById("op-one").value;
+                let secondArgument = document.getElementById("op-two").value;
+
+                let result = Number(firstArgument) + Number(secondArgument);
+
+                alert(result);
+                break;
+
+            case "-":
+                let firstArgument = document.getElementById("op-one").value;
+                let secondArgument = document.getElementById("op-two").value;
+
+                let result = Number(firstArgument) - Number(secondArgument);
+
+                alert(result);
+                break;
+
+            case "*":
+                let firstArgument = document.getElementById("op-one").value;
+                let secondArgument = document.getElementById("op-two").value;
+
+                let result = Number(firstArgument) * Number(secondArgument);
+
+                alert(result);
+                break;
+
+            case "/":
+                let firstArgument = document.getElementById("op-one").value;
+                let secondArgument = document.getElementById("op-two").value;
+
+                let result = Number(firstArgument) - Number(secondArgument);
+
+                alert(result);
+        }
+    });
     return true;
 })();
+
