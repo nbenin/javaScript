@@ -11,11 +11,15 @@
 
 (function() {
 
-    // to get the value of an input: document.getElementById("element-id").value
-
+    // Listen for click
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        // Get value and turn into an array
+        let stringToBeTurnedIntoArray = document.getElementById("numbers").value;
+        let arrayToBeSorted = stringToBeTurnedIntoArray.split(", ");
+
+        //display sorted array
+        alert(arrayToBeSorted.sort(function(a, b){return a-b}));
 
     });
 

@@ -10,12 +10,13 @@
 // You will have time to focus on it later.
 
 function buttonPressed(x) {
-    // to get the value of an input: document.getElementById("element-id").value
-    let operator = x;
+
+    // Set variables for calculations
     let firstNumber = parseInt(document.getElementById("op-one").value);
     let secondNumber = parseInt(document.getElementById("op-two").value);
 
-    switch (operator) {
+    // take id and use for switch statement
+    switch (x) {
         case "addition":
             alert(firstNumber + secondNumber);
             break;

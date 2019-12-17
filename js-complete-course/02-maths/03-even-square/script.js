@@ -11,6 +11,7 @@
 
 (function() {
 
+    // Listen for clicks
     document.getElementById("run").addEventListener("click", function() {
 
         // make and array to hold results

@@ -10,7 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-    // to get the value of an input: document.getElementById("element-id").value
+
+    // Listen for clicks
 
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
