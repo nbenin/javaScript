@@ -9,13 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function buttonPressed(event) {
+(function buttonPressed(event) {
     let element = event.target;
     alert(element.id);
-}
+})();
 
 (function() {
-    document.getElementsByTagName("actions").onclick = buttonPressed();
+    var buttonPressed = function () {
+        alert("Button clicked, id " + this.id + ", text" + this.innerHTML);
+    }
+    document.getElementById("addition").onclick = buttonPressed();
+    document.getElementById("substraction").onclick = buttonPressed();
+    document.getElementById("multiplication").onclick = buttonPressed();
+    document.getElementById("division").onclick = buttonPressed();
+
 
 })();
 
