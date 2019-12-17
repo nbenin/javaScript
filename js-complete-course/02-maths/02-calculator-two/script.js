@@ -9,16 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function test() {
-    return true;
+function buttonPressed(event) {
+    let element = event.target;
+    alert(element.id);
 }
 
 (function() {
-    document.getElementsByTagName("button").addEventListener("click", function() {
-        
-    });
+    document.getElementsByTagName("actions").onclick = buttonPressed();
 
-
-    return true;
 })();
 
