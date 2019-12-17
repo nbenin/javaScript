@@ -13,7 +13,16 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        // make and array to hold results
+        let arrayOfSquaredNumbers = [];
+
+        // loop through 1 - 21 and store in array
+        for (let i = 1; i <= 21; i++) {
+            arrayOfSquaredNumbers[i - 1] = i * i + " ";
+        }
+
+        // display result
+        alert(arrayOfSquaredNumbers);
 
     });
 
