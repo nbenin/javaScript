@@ -18,7 +18,7 @@
         let firstArgument = document.getElementById("op-one").value;
         let secondArgument = document.getElementById("op-two").value;
 
-        alert(Number(firstArgument) + Number(secondArgument));
+        alert(parseInt(firstArgument) + parseInt(secondArgument));
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
@@ -26,7 +26,7 @@
         let firstArgument = document.getElementById("op-one").value;
         let secondArgument = document.getElementById("op-two").value;
 
-        alert(Number(firstArgument) - Number(secondArgument));
+        alert(parseInt(firstArgument) - parseInt(secondArgument));
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
@@ -34,7 +34,7 @@
         let firstArgument = document.getElementById("op-one").value;
         let secondArgument = document.getElementById("op-two").value;
 
-        alert (Number(firstArgument) * Number(secondArgument));
+        alert (parseInt(firstArgument) * parseInt(secondArgument));
     });
 
     document.getElementById("division").addEventListener("click", function() {
@@ -42,6 +42,6 @@
         let firstArgument = document.getElementById("op-one").value;
         let secondArgument = document.getElementById("op-two").value;
 
-        alert(Number(firstArgument) / Number(secondArgument));
+        alert(parseInt(firstArgument) / parseInt(secondArgument));
     });
 })();

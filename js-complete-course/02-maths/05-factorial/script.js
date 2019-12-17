@@ -15,8 +15,21 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let numberToBeCalculated = document.getElementById("number").value;
+        let result = factorial(numberToBeCalculated);
+        alert(result);
 
     });
 
 })();
+
+// Recursive factorial function
+
+function factorial(x) {
+
+    if (x == 1) {
+        return 1;
+    }
+    
+    return x * factorial(x - 1);
+}
