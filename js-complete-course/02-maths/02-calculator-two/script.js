@@ -9,20 +9,25 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function buttonPressed(event) {
-    let element = event.target;
-    alert(element.id);
-})();
+function buttonPressed(x) {
+    // to get the value of an input: document.getElementById("element-id").value
+    let operator = x;
+    let firstNumber = parseInt(document.getElementById("op-one").value);
+    let secondNumber = parseInt(document.getElementById("op-two").value);
 
-(function() {
-    var buttonPressed = function () {
-        alert("Button clicked, id " + this.id + ", text" + this.innerHTML);
+    switch (operator) {
+        case "addition":
+            alert(firstNumber + secondNumber);
+            break;
+        case "substraction":
+            alert(firstNumber - secondNumber);
+            break;
+        case "multiplication":
+            alert(firstNumber * secondNumber);
+            break;
+        case "division":
+            alert(firstNumber / secondNumber);
+            break;
     }
-    document.getElementById("addition").onclick = buttonPressed();
-    document.getElementById("substraction").onclick = buttonPressed();
-    document.getElementById("multiplication").onclick = buttonPressed();
-    document.getElementById("division").onclick = buttonPressed();
-
-
-})();
+}
 
