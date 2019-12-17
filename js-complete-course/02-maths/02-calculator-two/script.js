@@ -16,7 +16,7 @@ function test() {
 (function() {
     document.getElementsByTagName("button").addEventListener("click", function() {
         
-    }
+    });
 
 
     return true;
