@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    // for loop 1-100
+
+    for (let fizzBuzzNumber = 0; fizzBuzzNumber <= 100; fizzBuzzNumber++) {
+        if (fizzBuzzNumber % 3 == 0 && fizzBuzzNumber % 5 == 0) {
+            console.log("fizzbuzz");
+        }
+        else if (fizzBuzzNumber % 3 == 0) {
+            console.log("fizz");
+        }
+        else if (fizzBuzzNumber % 5 == 0) {
+            console.log("buzz");
+        }
+        else {
+            console.log(fizzBuzzNumber);
+        }
+    }
 
 })();
