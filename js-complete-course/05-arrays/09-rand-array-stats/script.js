@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        // initializing array and filling with random numbers
+        let randomNumberArray = [];
+        for (index = 0; index < 10; index++) {
+            randomNumberArray[index] = Math.floor(Math.random() * 100) + 1;
+        }
+        console.log(randomNumberArray);
+
+    });
 
 })();
