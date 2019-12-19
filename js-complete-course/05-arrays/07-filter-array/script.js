@@ -89,6 +89,19 @@
         },
     ];
 
-    // your code here
+
+
+    document.getElementById("run").addEventListener("click", function(){
+       people.forEach(makeNewArray);
+
+        // initializing empty array
+        let arrayWithOnlyLegalAge = [];
+    });
 
 })();
+
+function makeNewArray(arrayOfPeople) {
+    if (arrayOfPeople.age > 18) {
+        arrayWithOnlyLegalAge += arrayOfPeople;
+    }
+}
