@@ -26,6 +26,14 @@
         "cherry",
     ];
 
-    // your code here
+    // going for a walk
+
+    document.getElementById("run").addEventListener("click", function() {
+        let fruitLoop;
+        for (fruitLoop in fruits) {
+            alert(fruits[fruitLoop]);
+        }
+    })
+
 
 })();
