@@ -89,6 +89,15 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+       people.forEach(onlyJeanDuponts);
+    });
 
 })();
+
+// Iterate through array and only log if Jean DuPont
+function onlyJeanDuponts(arrayOfPeople, index) {
+    if (arrayOfPeople.firstname === "Jean" && arrayOfPeople.lastname === "Dupont") {
+        console.log(arrayOfPeople.email + " index:" + index);
+    }
+}
