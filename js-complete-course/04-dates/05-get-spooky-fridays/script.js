@@ -31,12 +31,13 @@
 // Function to find Friday the 13ths
 function findFridayTheThirteenths (year) {
     let theSpookiestMonths = []
+    let monthNames = ["January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December "];
 
     // for loop to find the friday the 13ths
-    for (let month = 0; month > 12; month++) {
+    for (let month = 0; month < 12; month++) {
         var yearToBeChecked = new Date(year, month, 13);
         if (yearToBeChecked.getDay() === 5) {
-            theSpookiestMonths += month;
+            theSpookiestMonths += monthNames[month] ;
         }
     }
     return theSpookiestMonths;
