@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        // Get year that user Inputs and check if integer
+        let userInputtedYear = document.getElementById("year").value;
+        if (Number.isInteger(userInputtedYear) === false) {
+            alert("please enter a real number");
+
+        }
+
+        // if an integer, calculate friday the 13s
+        else {
+            
+        }
+
+    })
 
 })();
