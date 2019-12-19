@@ -89,19 +89,16 @@
         },
     ];
 
-
-
-    document.getElementById("run").addEventListener("click", function(){
-       people.forEach(makeNewArray);
-
-        // initializing empty array
-        let arrayWithOnlyLegalAge = [];
+    document.getElementById("run").addEventListener("click", function() {
+        console.log(people.filter(checkIfAdult));
     });
 
 })();
 
-function makeNewArray(arrayOfPeople) {
-    if (arrayOfPeople.age > 18) {
-        arrayWithOnlyLegalAge += arrayOfPeople;
+function checkIfAdult(allThePeople) {
+    if (allThePeople.age > 18) {
+        return allThePeople;
     }
 }
+
+
