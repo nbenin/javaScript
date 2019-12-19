@@ -25,7 +25,7 @@
             document.getElementById("target").innerHTML = "Hello";
         }
     }
-    
+
     else {
         document.getElementById("target").innerHTML = "Hello";
     }
