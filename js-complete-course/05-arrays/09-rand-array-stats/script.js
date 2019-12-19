@@ -17,6 +17,7 @@
         let randomNumberArray = [];
         for (index = 0; index < 10; index++) {
             randomNumberArray[index] = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("n-" + (index + 1)).innerHTML = randomNumberArray[index];
         }
         console.log(randomNumberArray);
 
