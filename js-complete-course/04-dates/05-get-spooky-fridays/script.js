@@ -14,17 +14,30 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // Get year that user Inputs and check if integer
-        let userInputtedYear = document.getElementById("year").value;
-        if (Number.isInteger(userInputtedYear) === false) {
+        let userInputtedYear = parseInt(document.getElementById("year").value);
+        if (Number.isInteger(userInputtedYear) === false || userInputtedYear < 0) {
             alert("please enter a real number");
-
         }
 
         // if an integer, calculate friday the 13s
         else {
-            
+            let spookyMonths = findFridayTheThirteenths(userInputtedYear);
+            alert (spookyMonths);
         }
-
-    })
+    });
 
 })();
+
+// Function to find Friday the 13ths
+function findFridayTheThirteenths (year) {
+    let theSpookiestMonths = []
+
+    // for loop to find the friday the 13ths
+    for (let month = 0; month > 12; month++) {
+        var yearToBeChecked = new Date(year, month, 13);
+        if (yearToBeChecked.getDay() === 5) {
+            theSpookiestMonths += month;
+        }
+    }
+    return theSpookiestMonths;
+}
