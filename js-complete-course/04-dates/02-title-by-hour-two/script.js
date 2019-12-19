@@ -13,6 +13,8 @@
 
     // get Date and store in variable
     let currentTime = new Date();
+
+    // checking saying good evening until 5am
     if (currentTime.getHours() >= 18 || currentTime.getHours() < 5) {
         document.getElementById("target").innerHTML = "Good Evening!";
     }
