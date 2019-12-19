@@ -11,14 +11,13 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    // Get Date and store in variable for comparisons
     let currentTime = new Date();
-    if (currentTime.getHours() >= 18) {
-        document.getElementById("target").innerHTML = "Good Evening!"
+    if (currentTime.getHours() >= 18 || currentTime.getHours() < 5) {
+        document.getElementById("target").innerHTML = "Good Evening!";
     }
     else {
-        document.getElementById("target").innerHTML = "Hello!"
+        document.getElementById("target").innerHTML = "Hello!";
     }
-    // your code here
 
 })();
