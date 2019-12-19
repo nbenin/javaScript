@@ -26,7 +26,7 @@
         "cherry",
     ];
 
-    // going for a walk
+    // going for a walk with some fruit loops
 
     document.getElementById("run").addEventListener("click", function() {
         let fruitLoop;

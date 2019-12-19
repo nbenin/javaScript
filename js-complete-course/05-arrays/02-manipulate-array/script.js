@@ -26,6 +26,7 @@
 
     alert(fruits);
 
+    // on click, take off first element, then last. After add banan to beginning and kiwi to the end
     document.getElementById("run").addEventListener("click", function() {
        fruits.shift();
        fruits.pop();

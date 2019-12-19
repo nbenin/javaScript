@@ -26,6 +26,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        fruits.forEach(logItInConsole);
+    })
 
 })();
+
+// Function for my ForEach method
+function logItInConsole(x) {
+    console.log([x])
+}
