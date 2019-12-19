@@ -39,6 +39,13 @@
         },
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        people.forEach(logOnlyTheFirstNames);
+        }
+    )
 })();
+
+// function to grab only first names
+function logOnlyTheFirstNames(people) {
+    console.log(people.firstname);
+}

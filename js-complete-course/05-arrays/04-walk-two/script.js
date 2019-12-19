@@ -34,5 +34,5 @@
 
 // Function for my ForEach method
 function logItInConsole(x) {
-    console.log([x])
+    console.log(x)
 }
