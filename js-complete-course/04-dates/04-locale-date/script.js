@@ -11,8 +11,48 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    // Get date and extract values
+    let currentDate = new Date();
+    let currentNameOfDay = nameOfDay(currentDate.getDay());
+    let currentNumberOfDay = currentDate.getDate();
+    let currentMonth = nameOfMonth(currentDate.getMonth());
+
+
+
+    document.getElementById("target").innerHTML = currentDate;
 
     // your code here
 
 })();
+
+// Function to get name of day
+function nameOfDay(x) {
+    switch (x) {
+        case 0:
+            return "Sunday";
+            break;
+        case 1:
+            return "Monday";
+            break;
+        case 2:
+            return "Tuesday";
+            break;
+        case 3:
+            return "Wednesday";
+            break;
+        case 4:
+            return "Thursday";
+            break;
+        case 5:
+            return "Friday";
+            break;
+        case 6:
+            return "Saturday";
+            break;
+    }
+}
+
+// Function to get name of Month
+
+
+

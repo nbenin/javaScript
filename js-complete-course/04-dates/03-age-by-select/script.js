@@ -14,7 +14,7 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // Get user input and set it in a date object
-        let userBirthday = new Date(document.getElementById("dob-year").value,document.getElementById("dob-month").value - 1, document.getElementById("dob-day").value);
+        let userBirthday = new Date(document.getElementById("dob-year").value, document.getElementById("dob-month").value - 1, document.getElementById("dob-day").value);
 
         // get current day/month/year to compare
         let currentDate = new Date();
@@ -25,7 +25,5 @@
         alert("you are " + Math.floor(ageOfUser) + "years old");
 
     });
-
-
 
 })();
