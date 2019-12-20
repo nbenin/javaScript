@@ -89,6 +89,15 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+       let totalAge = people.reduce(getSumOfArray, 0);
+        console.log(totalAge);
+    });
 
 })();
+
+// Function to sum the ages
+function getSumOfArray (total, currentValue) {
+    total += currentValue.age;
+    return total;
+}
