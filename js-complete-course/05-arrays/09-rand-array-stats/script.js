@@ -21,16 +21,36 @@
         }
 
         // finding values for the rest of assignment
-        let highestNumber = randomNumberArray.forEach(findLowestNumber);
-        let lowestNumber = randomNumberArray.forEach(findHighestNumber);
+        let highestNumber = findLowestNumber(randomNumberArray);
+        let lowestNumber = findHighestNumber(randomNumberArray);
+        let sumOfNumbers = sumOfArray(randomNumberArray);
+        let averageOfNumbers = averageOfArray(randomNumberArray);
     });
 
 })();
 
-function findHighestNumber() {
+function findHighestNumber(ourArray) {
+
+    // Loop through array and return lowest number
+    let highestNumber = ourArray[0];
+    for (i = 0; i < ourArray.length; i++) {
+        if (ourArray[i] > highestNumber) {
+            highestNumber = ourArray[i];
+        }
+    }
+    return highestNumber;
 
 }
 
-function findLowestNumber() {
+function findLowestNumber(ourArray) {
+
+    // Loop through array and return highest number
+    let lowestNumber = ourArray[0];
+    for (i = 0; i < ourArray.length; i++) {
+        if (ourArray[i] < lowestNumber) {
+            lowestNumber = ourArray[i];
+        }
+    }
+    return lowestNumber;
     
 }
