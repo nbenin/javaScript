@@ -20,11 +20,10 @@
             document.getElementById("n-" + (index + 1)).innerHTML = randomNumberArray[index];
         }
 
-        // finding values for the rest of assignment
-        let highestNumber = findLowestNumber(randomNumberArray);
-        let lowestNumber = findHighestNumber(randomNumberArray);
-        let sumOfNumbers = sumOfArray(randomNumberArray);
-        let averageOfNumbers = averageOfArray(randomNumberArray);
+        document.getElementById("min").innerHTML = findLowestNumber(randomNumberArray);
+        document.getElementById("max").innerHTML = findHighestNumber(randomNumberArray);
+        document.getElementById("sum").innerHTML = sumOfArray(randomNumberArray);
+        document.getElementById("average").innerHTML = sumOfArray(randomNumberArray) / randomNumberArray.length;
     });
 
 })();
@@ -53,4 +52,14 @@ function findLowestNumber(ourArray) {
     }
     return lowestNumber;
     
+}
+
+function sumOfArray(ourArray) {
+
+    // Loop through and add
+    let sum = 0;
+    for (i = 0; i < ourArray.length - 1; i++) {
+       sum += ourArray[i];
+    }
+    return sum;
 }
