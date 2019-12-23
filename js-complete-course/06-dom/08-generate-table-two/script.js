@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    // using shorter formula from last exercise
+    document.getElementById('target').appendChild(document.createElement('TABLE'));
+    document.getElementsByTagName('table')[0].appendChild(document.createElement('TBODY'));
+
+    // nested for loops
+    for (i = 0; i < 10; i++) {
+        document.getElementsByTagName('tbody')[0].appendChild(document.createElement('TR'));
+        for (j = 0; j < 10; j++) {
+            document.getElementsByTagName('tr')[i].appendChild(document.createElement('td'));
+            document.getElementsByTagName('td')[(i * 10) + j].appendChild(document.createTextNode((i + 1) * (j + 1)));
+        }
+    }
 
 })();
