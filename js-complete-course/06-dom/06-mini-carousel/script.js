@@ -19,6 +19,21 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    // set counter fro carousel
+    let carouselCounter = 0;
+
+    // listening to button for clicks
+    document.getElementById("next").addEventListener("click", function() {
+         let imageTag = document.getElementsByTagName("img");
+
+         // check if carousel starts over or not
+         if (carouselCounter === 5) {
+            carouselCounter = 0;
+         }
+
+         // set attribute
+         imageTag[0].setAttribute("src", gallery[carouselCounter]);
+         carouselCounter++;
+    });
 
 })();
