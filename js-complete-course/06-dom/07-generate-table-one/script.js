@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    // create table elements
+    let generateNewTable = document.createElement("TABLE");
+    let generateTableRow = document.createElement("TR");
+    let generateTableData = document.createElement("TD");
 
+    // select "target" div and append
+
+
+    for (i = 0; i < 10; i++) {
+        if (i === 0) {
+            let divForTable = document.getElementById("target");
+            divForTable.appendChild(generateNewTable);
+        }
+        generateNewTable.appendChild(generateTableRow);
+        generateTableRow.appendChild(generateTableData);
+
+
+    }
 })();
