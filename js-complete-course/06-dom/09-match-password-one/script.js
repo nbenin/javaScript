@@ -16,18 +16,29 @@
     // Get values and store in variable
     let firstPassword = document.getElementById('pass-one').value;
     let secondPassword = document.getElementById('pass-two').value;
+    let longestPassword;
     let passwordsSame = false;
 
-    for (i = 0; i < firstPassword.length; i++) {
+    // find longest password
+    if (firstPassword.length > secondPassword.length) {
+        longestPassword = firstPassword;
+    }
+    else {
+        longestPassword = secondPassword;
+    }
+
+    // check character by character if same
+    for (i = 0; i < longestPassword.length; i++) {
         if (firstPassword[i] === secondPassword[i]) {
             passwordsSame = true;
         }
         else {
             passwordsSame = false;
-            continue;
+            break;
         }
     }
 
+    // if same green, else red
     if (passwordsSame === true) {
         document.getElementById('pass-one').style.borderColor = 'green';
         document.getElementById('pass-two').style.borderColor = 'green';
