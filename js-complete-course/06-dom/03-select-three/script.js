@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+    // storing all in a variable
+    let allParagraphElements = document.querySelectorAll("p.target");
+
+    // looping through and changing inner html
+    for (i = 0; i < allParagraphElements.length; i++) {
+        allParagraphElements[i].innerHTML = "Owned";
+    }
 
 })();
