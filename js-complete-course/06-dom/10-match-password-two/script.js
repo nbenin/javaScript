@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+    // listen for clicks
+    document.getElementById('run').addEventListener('click', function() {
+
+        // if same add error class, else add emmpy error
+        if (document.getElementById('pass-one').value !== document.getElementById('pass-two').value) {
+            document.getElementById('pass-one').setAttribute('class', 'error');
+            document.getElementById('pass-two').setAttribute('class', 'error');
+        }
+        else {
+            document.getElementById('pass-one').setAttribute('class', '');
+            document.getElementById('pass-two').setAttribute('class', '');
+        }
+    });
 
 })();

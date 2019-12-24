@@ -2,6 +2,6 @@
 
 - Learning JavaScript
 
-- working from home day, Starting the dates!!
+## Current task
 
-- set for fridy
+- Working on the DOM

@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    // getting value from data-target and making new tag
+    let newImageNode = document.createElement("img");
+    newImageNode.setAttribute("src", document.querySelector("#source").getAttribute("data-image"));
+
+    // appending new tag to figure and removing span
+    document.getElementById("target").appendChild(newImageNode);
+    let imageSource = document.getElementById("source");
+    imageSource.parentNode.removeChild(imageSource);
+
 
 })();

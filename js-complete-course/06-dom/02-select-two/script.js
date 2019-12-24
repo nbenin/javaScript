@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
-
+    // trying to use Query Selector
+    let nodeToBeChanged = document.querySelector("#target");
+    nodeToBeChanged.innerHTML = "Owned";
 })();

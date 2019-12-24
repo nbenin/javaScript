@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    // Store image tag and sources in variables
+    let imageTag = document.getElementsByTagName("img");
+    let imageBeforeHover = imageTag[0].getAttribute("src");
+    let imageAfterHover = imageTag[0].getAttribute("data-hover");
+    console.log(imageAfterHover);
+    console.log(imageBeforeHover);
+    console.log(imageTag);
+
+    // watch for hover and change if hoverd
+    imageTag[0].addEventListener("mouseenter", function() {
+        imageTag[0].setAttribute("src", imageAfterHover);
+    });
+
+    imageTag[0].addEventListener("mouseleave", function() {
+        imageTag[0].setAttribute("src", imageBeforeHover);
+    })
+
+
 
 })();
