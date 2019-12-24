@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    // first try
+    document.getElementById("target").
 
 })();

@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    // setting sttribute to max length of 10
+    document.getElementById("pass-one").setAttribute("maxlength", "10");
+
+    // adding listener to input field
+    document.getElementById("pass-one").addEventListener("keyup", function() {
+        let userInformation = document.getElementById("pass-one").value;
+        document.getElementById("counter").innerHTML = userInformation.length + "/10";
+    });
 
 })();
