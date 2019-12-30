@@ -11,7 +11,27 @@
 
 (function() {
 
-    // first try
-    document.getElementById("target").
+    // store text in a variable set boolean for incrementing
+    let textWave = document.getElementById("target").innerHTML;
+    let incrementationIndicator = true;
+    let i = 0;
+
+    // loop through the text, changing fontsize
+    for (i = 0; i < textWave.length; i++) {
+
+        // setting a variable to handle the wave
+        let incrementValue = 0;
+
+        // if incrementing do this loop
+        if (incrementationIndicator === true) {
+            
+        }
+
+        // if not incrementing then must be decrementing
+        else if (incrementationIndicator === false) {
+
+        }
+
+    }
 
 })();

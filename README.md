@@ -4,4 +4,4 @@
 
 ## Current task
 
-- going to work on design challenge today
+- going to work on 7 actually !
