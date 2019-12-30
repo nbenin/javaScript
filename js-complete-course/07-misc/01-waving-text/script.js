@@ -11,7 +11,7 @@
 
 (function() {
 
-    // store text in a variable set boolean for incrementing
+    // store text in a variable, set boolean for incrementing, set incrementation counter, set empty array
     let textWave = document.getElementById("target").innerHTML;
     let incrementationIndicator = true;
     let incrementValue = 0;
@@ -22,37 +22,46 @@
 
         // check if space
         if (textWave[i] === " ") {
-            break;
+            modifiedTextWave += " ";
+            continue;
         }
 
         // if incrementing do this loop
         if (incrementationIndicator === true) {
             switch (incrementValue) {
                 case 0:
-                    modifiedTextWave += "<span style='font-size:20px'>"
+                    modifiedTextWave += "<span style='font-size:20px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
                     console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 1:
-                    document.getElementById("target").innerHTML[i].fontsize(2);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:40px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 2:
-                    document.getElementById("target").innerHTML[i].fontsize(3);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:60px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 3:
-                    document.getElementById("target").innerHTML[i].fontsize(4);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:80px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 4:
-                    document.getElementById("target").innerHTML[i].fontsize(5);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:100px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementationIndicator = false;
                     break;
             }
@@ -63,33 +72,45 @@
         else {
             switch (incrementValue) {
                 case 4:
-                    document.getElementById("target").innerHTML[i].fontsize(5);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:100px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 3:
-                    document.getElementById("target").innerHTML[i].fontsize(4);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:80px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 2:
-                    document.getElementById("target").innerHTML[i].fontsize(3);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:60px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 1:
-                    document.getElementById("target").innerHTML[i].fontsize(2);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:40px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 0:
-                    document.getElementById("target").innerHTML[i].fontsize(1);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:20px'>";
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementationIndicator = true;
                     break;
             }
         }
     }
-    console.log(textWave);
+
+    // Set inner html to new array
+    document.getElementById("target").innerHTML = modifiedTextWave;
 
 })();
