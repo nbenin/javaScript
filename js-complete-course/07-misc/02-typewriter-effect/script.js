@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    // mostly from https://www.w3schools.com/howto/howto_js_typewriter.asp
+    // get text from target in a variable and empty the tag
+    let textToBeTransformed = document.getElementById("target").innerHTML;
+    document.getElementById("target").innerHTML = "";
+    let textCounter = 0;
+    newFunction();
+
+    // loop
+    function newFunction () {
+        if (textCounter < textToBeTransformed.length) {
+            let randomSpeed = Math.floor(Math.random() * (200 - 25) + 25);
+            console.log(randomSpeed);
+            document.getElementById("target").innerHTML += textToBeTransformed.charAt(textCounter);
+            textCounter++;
+            setTimeout(newFunction, randomSpeed);
+        }
+    }
 
 })();

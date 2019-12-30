@@ -33,39 +33,33 @@
                     modifiedTextWave += "<span style='font-size:20px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 1:
                     modifiedTextWave += "<span style='font-size:40px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 2:
                     modifiedTextWave += "<span style='font-size:60px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 3:
                     modifiedTextWave += "<span style='font-size:80px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 4:
                     modifiedTextWave += "<span style='font-size:100px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementationIndicator = false;
                     break;
             }
-
         }
 
         // if not incrementing then must be decrementing
@@ -75,35 +69,30 @@
                     modifiedTextWave += "<span style='font-size:100px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 3:
                     modifiedTextWave += "<span style='font-size:80px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 2:
                     modifiedTextWave += "<span style='font-size:60px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 1:
                     modifiedTextWave += "<span style='font-size:40px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementValue--;
                     break;
                 case 0:
                     modifiedTextWave += "<span style='font-size:20px'>";
                     modifiedTextWave += textWave[i];
                     modifiedTextWave += "</span>";
-                    console.log(modifiedTextWave);
                     incrementationIndicator = true;
                     break;
             }
