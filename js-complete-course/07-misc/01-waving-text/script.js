@@ -15,16 +15,24 @@
     let textWave = document.getElementById("target").innerHTML;
     let incrementationIndicator = true;
     let incrementValue = 0;
+    let modifiedTextWave = "";
 
     // loop through the text, changing fontsize
     for (i = 0; i < textWave.length; i++) {
+
+        // check if space
+        if (textWave[i] === " ") {
+            break;
+        }
 
         // if incrementing do this loop
         if (incrementationIndicator === true) {
             switch (incrementValue) {
                 case 0:
-                    document.getElementById("target").innerHTML[i].fontsize(1);
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    modifiedTextWave += "<span style='font-size:20px'>"
+                    modifiedTextWave += textWave[i];
+                    modifiedTextWave += "</span>";
+                    console.log(modifiedTextWave);
                     incrementValue++;
                     break;
                 case 1:
