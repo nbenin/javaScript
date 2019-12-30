@@ -13,10 +13,8 @@
 
     // store text in a variable set boolean for incrementing
     let textWave = document.getElementById("target").innerHTML;
-    console.log(textWave);
     let incrementationIndicator = true;
     let incrementValue = 0;
-    console.log(document.getElementById("target").innerHTML[0]);
 
     // loop through the text, changing fontsize
     for (i = 0; i < textWave.length; i++) {
@@ -25,28 +23,23 @@
         if (incrementationIndicator === true) {
             switch (incrementValue) {
                 case 0:
-                    document.getElementById("target").innerHTML[i] = "small";
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    changeFontSize();
                     incrementValue++;
                     break;
                 case 1:
-                    document.getElementById("target").style.fontSize[i] = "medium";
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    changeFontSize();
                     incrementValue++;
                     break;
                 case 2:
-                    document.getElementById("target").style.fontSize[i] = "large";
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    changeFontSize();
                     incrementValue++;
                     break;
                 case 3:
-                    document.getElementById("target").style.fontSize[i] = "x-large";
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    changeFontSize();
                     incrementValue++;
                     break;
                 case 4:
-                    document.getElementById("target").style.fontSize[i] = "xx-large";
-                    console.log(document.getElementById("target").innerHTML[i]);
+                    changeFontSize();
                     incrementationIndicator = false;
                     break;
             }
@@ -57,28 +50,32 @@
         else {
             switch (incrementValue) {
                 case 4:
-                    document.getElementById("target").style.fontSize[i] = "xx-large";
+                    changeFontSize;
                     incrementValue--;
                     break;
                 case 3:
-                    document.getElementById("target").style.fontSize[i] = "x-large";
+                    changeFontSize();
                     incrementValue--;
                     break;
                 case 2:
-                    document.getElementById("target").style.fontSize[i] = "large";
+                    changeFontSize();
                     incrementValue--;
                     break;
                 case 1:
-                    document.getElementById("target").style.fontSize[i] = "medium";
+                    changeFontSize();
                     incrementValue--;
                     break;
-                case 0:
-                    document.getElementById("target").style.fontSize[i] = "small";
+                case 0:;
+                    changeFontSize();
                     incrementationIndicator = true;
                     break;
             }
         }
     }
-    console.log(textWave);
 
 })();
+
+// function to add span and change font size
+function changeFontSize () {
+    
+}
