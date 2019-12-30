@@ -14,24 +14,63 @@
     // store text in a variable set boolean for incrementing
     let textWave = document.getElementById("target").innerHTML;
     let incrementationIndicator = true;
-    let i = 0;
+    let incrementValue = 0;
 
     // loop through the text, changing fontsize
     for (i = 0; i < textWave.length; i++) {
 
-        // setting a variable to handle the wave
-        let incrementValue = 0;
-
         // if incrementing do this loop
         if (incrementationIndicator === true) {
-            
+            switch (incrementValue) {
+                case 0:
+                    textWave[i].style.fontSize = "small";
+                    incrementValue++;
+                    break;
+                case 1:
+                    textWave[i].style.fontSize = "medium";
+                    incrementValue++;
+                    break;
+                case 2:
+                    textWave[i].style.fontSize = "large";
+                    incrementValue++;
+                    break;
+                case 3:
+                    textWave[i].style.fontSize = "x-large";
+                    incrementValue++;
+                    break;
+                case 4:
+                    textWave[i].style.fontSize = "xx-large";
+                    incrementationIndicator = false;
+                    break;
+            }
+
         }
 
         // if not incrementing then must be decrementing
-        else if (incrementationIndicator === false) {
-
+        else {
+            switch (incrementValue) {
+                case 4:
+                    textWave[i].style.fontSize = "xx-large";
+                    incrementValue--;
+                    break;
+                case 3:
+                    textWave[i].style.fontSize = "x-large";
+                    incrementValue--;
+                    break;
+                case 2:
+                    textWave[i].style.fontSize = "large";
+                    incrementValue--;
+                    break;
+                case 1:
+                    textWave[i].style.fontSize = "medium";
+                    incrementValue--;
+                    break;
+                case 0:
+                    textWave[i].style.fontSize = "small";
+                    incrementationIndicator = true;
+                    break;
+            }
         }
-
     }
 
 })();
