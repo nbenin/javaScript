@@ -23,23 +23,28 @@
         if (incrementationIndicator === true) {
             switch (incrementValue) {
                 case 0:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(1);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 1:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(2);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 2:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(3);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 3:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(4);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 4:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(5);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementationIndicator = false;
                     break;
             }
@@ -50,32 +55,33 @@
         else {
             switch (incrementValue) {
                 case 4:
-                    changeFontSize;
+                    document.getElementById("target").innerHTML[i].fontsize(5);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue--;
                     break;
                 case 3:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(4);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue--;
                     break;
                 case 2:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(3);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue--;
                     break;
                 case 1:
-                    changeFontSize();
+                    document.getElementById("target").innerHTML[i].fontsize(2);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue--;
                     break;
-                case 0:;
-                    changeFontSize();
+                case 0:
+                    document.getElementById("target").innerHTML[i].fontsize(1);
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementationIndicator = true;
                     break;
             }
         }
     }
+    console.log(textWave);
 
 })();
-
-// function to add span and change font size
-function changeFontSize () {
-    
-}
