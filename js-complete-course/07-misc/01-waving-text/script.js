@@ -13,8 +13,10 @@
 
     // store text in a variable set boolean for incrementing
     let textWave = document.getElementById("target").innerHTML;
+    console.log(textWave);
     let incrementationIndicator = true;
     let incrementValue = 0;
+    console.log(document.getElementById("target").innerHTML[0]);
 
     // loop through the text, changing fontsize
     for (i = 0; i < textWave.length; i++) {
@@ -23,23 +25,28 @@
         if (incrementationIndicator === true) {
             switch (incrementValue) {
                 case 0:
-                    textWave[i].style.fontSize = "small";
+                    document.getElementById("target").innerHTML[i] = "small";
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 1:
-                    textWave[i].style.fontSize = "medium";
+                    document.getElementById("target").style.fontSize[i] = "medium";
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 2:
-                    textWave[i].style.fontSize = "large";
+                    document.getElementById("target").style.fontSize[i] = "large";
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 3:
-                    textWave[i].style.fontSize = "x-large";
+                    document.getElementById("target").style.fontSize[i] = "x-large";
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementValue++;
                     break;
                 case 4:
-                    textWave[i].style.fontSize = "xx-large";
+                    document.getElementById("target").style.fontSize[i] = "xx-large";
+                    console.log(document.getElementById("target").innerHTML[i]);
                     incrementationIndicator = false;
                     break;
             }
@@ -50,27 +57,28 @@
         else {
             switch (incrementValue) {
                 case 4:
-                    textWave[i].style.fontSize = "xx-large";
+                    document.getElementById("target").style.fontSize[i] = "xx-large";
                     incrementValue--;
                     break;
                 case 3:
-                    textWave[i].style.fontSize = "x-large";
+                    document.getElementById("target").style.fontSize[i] = "x-large";
                     incrementValue--;
                     break;
                 case 2:
-                    textWave[i].style.fontSize = "large";
+                    document.getElementById("target").style.fontSize[i] = "large";
                     incrementValue--;
                     break;
                 case 1:
-                    textWave[i].style.fontSize = "medium";
+                    document.getElementById("target").style.fontSize[i] = "medium";
                     incrementValue--;
                     break;
                 case 0:
-                    textWave[i].style.fontSize = "small";
+                    document.getElementById("target").style.fontSize[i] = "small";
                     incrementationIndicator = true;
                     break;
             }
         }
     }
+    console.log(textWave);
 
 })();
