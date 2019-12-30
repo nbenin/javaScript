@@ -4,4 +4,4 @@
 
 ## Current task
 
-- Working on the DOM
+- going to work on design challenge today
