@@ -11,24 +11,52 @@
 
 (function() {
 
-    // variables where info will be stored
-    let firstButtonValue;
-    let secondButtonValue;
-    let thirdButtonValue;
-    let fourthButtonValue;
-
     // adding event listeners to buttons
     document.getElementById('part-one').addEventListener('click', function() {
-        let firstButtonValue = document.getElementById('part-one').value;
+
+        // set new value, if 500, reset to 460
+        let newInnerValue = parseInt(document.getElementById('part-one').innerHTML, 10) + 1;
+        if (newInnerValue === 500) {
+            newInnerValue = 460;
+        }
+
+        // if under 10, prepend with a zero, else set innerHTML and parse to string for later concatenation
+        if (newInnerValue.length < 2) {
+            newInnerValue += "0";
+        }
+        document.getElementById('part-one').innerHTML = newInnerValue.toString(10);
+
+
     });
     document.getElementById('part-two').addEventListener('click', function() {
-        let secondButtonValue = document.getElementById('part-two').value;
+        let newInnerValue = parseInt(document.getElementById('part-two').innerHTML, 10) + 1;
+        if (newInnerValue === 100) {
+            newInnerValue = 0;
+        }
+        if (newInnerValue.length < 2) {
+            newInnerValue += "0";
+        }
+        document.getElementById('part-two').innerHTML = newInnerValue.toString(10);
     });
     document.getElementById('part-three').addEventListener('click', function() {
-        let thirdButtonValue = document.getElementById('part-three').value;
+        let newInnerValue = parseInt(document.getElementById('part-three').innerHTML, 10) + 1;
+        if (newInnerValue === 100) {
+            newInnerValue = 0;
+        }
+        if (newInnerValue.length < 2) {
+            newInnerValue += "0";
+        }
+        document.getElementById('part-three').innerHTML = newInnerValue.toString(10);
     });
     document.getElementById('part-four').addEventListener('click', function() {
-        let fourthButtonValue = document.getElementById('part-four').value;
+        let newInnerValue = parseInt(document.getElementById('part-four').innerHTML, 10) + 1;
+        if (newInnerValue === 100) {
+            newInnerValue = 0;
+        }
+        if (newInnerValue.length < 2) {
+            newInnerValue += "0";
+        }
+        document.getElementById('part-four').innerHTML = newInnerValue.toString(10);
     });
 
 })();
