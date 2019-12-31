@@ -4,4 +4,5 @@
 
 ## Current task
 
-- going to work on 7 actually !
+- continuing on 7
+
