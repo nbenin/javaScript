@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    // variables where info will be stored
+    let firstButtonValue;
+    let secondButtonValue;
+    let thirdButtonValue;
+    let fourthButtonValue;
+
+    // adding event listeners to buttons
+    document.getElementById('part-one').addEventListener('click', function() {
+        let firstButtonValue = document.getElementById('part-one').value;
+    });
+    document.getElementById('part-two').addEventListener('click', function() {
+        let secondButtonValue = document.getElementById('part-two').value;
+    });
+    document.getElementById('part-three').addEventListener('click', function() {
+        let thirdButtonValue = document.getElementById('part-three').value;
+    });
+    document.getElementById('part-four').addEventListener('click', function() {
+        let fourthButtonValue = document.getElementById('part-four').value;
+    });
 
 })();
