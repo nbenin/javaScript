@@ -26,8 +26,9 @@
             newInnerValue = "0" + newInnerValue;
         }
 
-        // add new value to page
+        // add new value to page and update page
         document.getElementById('part-one').innerHTML = newInnerValue;
+        updateWholePage();
 
     });
     document.getElementById('part-two').addEventListener('click', function() {
@@ -43,6 +44,7 @@
         }
 
         document.getElementById('part-two').innerHTML = newInnerValue;
+        updateWholePage();
     });
     document.getElementById('part-three').addEventListener('click', function() {
 
@@ -57,6 +59,7 @@
         }
 
         document.getElementById('part-three').innerHTML = newInnerValue;
+        updateWholePage();
     });
     document.getElementById('part-four').addEventListener('click', function() {
 
@@ -71,18 +74,19 @@
         }
 
         document.getElementById('part-four').innerHTML = newInnerValue;
+        updateWholePage();
     });
-
-    // Add listener to the whole button section, on change update info in target
-    document.getElementsByClassName('actions')[0].addEventListener('change', function() {
-
-        // get values from the buttons
-        let firstValue = document.getElementById('part-one').innerHTML;
-        let secondValue = document.getElementById('part-two').innerHTML;
-        let thirdValue = document.getElementById('part-three').innerHTML;
-        let fourthValue = document.getElementById('part-four').innerHTML;
-
-        document.getElementById('target').innerHTML = firstValue + secondValue + thirdValue + fourthValue;
-    });
-
 })();
+
+// function to update page
+function updateWholePage() {
+
+    // get values from the buttons
+    let firstValue = document.getElementById('part-one').innerHTML;
+    let secondValue = document.getElementById('part-two').innerHTML;
+    let thirdValue = document.getElementById('part-three').innerHTML;
+    let fourthValue = document.getElementById('part-four').innerHTML;
+
+    // concatenate value add a + at beginning
+    document.getElementById('target').innerHTML = "+" + firstValue + secondValue + thirdValue + fourthValue;
+}
