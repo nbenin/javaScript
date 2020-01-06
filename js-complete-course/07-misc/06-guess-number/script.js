@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    // randomize a number and set variables for counting and comparison
+    let guessThisNumber = Math.floor(Math.random() * 100 + 1);
+    let guessedNumber = parseInt(window.prompt("Guess the number between 1 and 100!"));
+    let numberOfGuesses = 1;
+
+    while (guessedNumber !== guessThisNumber) {
+        if (guessedNumber > guessThisNumber) {
+            guessedNumber = window.prompt('Lower, try again!');
+            numberOfGuesses++;
+        }
+        else if (guessedNumber < guessThisNumber) {
+            guessedNumber = window.prompt('Higher, try again!');
+            numberOfGuesses++;
+        }
+        else {
+            alert("That's it! You needed " + numberOfGuesses + " guesses! The number was " + guessThisNumber + "!");
+            return;
+        }
+    }
+
+
 
 })();
+
+

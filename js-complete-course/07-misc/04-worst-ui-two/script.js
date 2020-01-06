@@ -20,12 +20,6 @@
             newInnerValue = 460;
         }
 
-        // convert number to string for later concatenation. If under 10, add a zero before
-        newInnerValue += "";
-        if (newInnerValue.length < 2) {
-            newInnerValue = "0" + newInnerValue;
-        }
-
         // add new value to page and update page
         document.getElementById('part-one').innerHTML = newInnerValue;
         updateWholePage();
@@ -38,6 +32,7 @@
             newInnerValue = 0;
         }
 
+        // If Number smaller than 10, add a zero before
         newInnerValue += "";
         if (newInnerValue.length < 2) {
             newInnerValue = "0" + newInnerValue;
