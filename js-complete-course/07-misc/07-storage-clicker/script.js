@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    // get old storage if there, otherwise set a new one
+    if (localStorage.getItem("clickCounter") === null) {
+        lo
+    }
+
+    let counter = document.getElementById('target').innerHTML;
+    document.getElementById('increment').addEventListener('click', function() {
+
+    });
 
 })();

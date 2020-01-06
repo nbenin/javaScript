@@ -14,8 +14,15 @@
     // randomize a number and set variables for counting and comparison
     let guessThisNumber = Math.floor(Math.random() * 100 + 1);
     let guessedNumber = parseInt(window.prompt("Guess the number between 1 and 100!"));
+
+    // checking that number entered is actually a number
+    while (isNaN(guessedNumber)) {
+        guessedNumber = parseInt(window.prompt('please enter a real number'));
+    }
+
     let numberOfGuesses = 1;
 
+    // while loop to verify number
     while (guessedNumber !== guessThisNumber) {
         if (guessedNumber > guessThisNumber) {
             guessedNumber = window.prompt('Lower, try again!');
