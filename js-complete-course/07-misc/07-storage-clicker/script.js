@@ -11,21 +11,19 @@
 
 (function() {
 
-    let numberOfClicks;
-
     // set new storage if first time, otherwise set counter
-    if (localStorage.getItem("clickCounter") === null) {
-        numberOfClicks = 0;
-        localStorage.setItem("clickCounter", numberOfClicks);
+    if (localStorage.getItem('clickCounter') === null) {
+        localStorage.setItem('clickCounter', '0');
     }
     else {
-        document.getElementById('target').innerHTML = localStorage.getItem("clickCounter");
+        document.getElementById('target').innerHTML = localStorage.getItem('clickCounter');
     }
 
     // listen for clicks and increment counter
     document.getElementById('increment').addEventListener('click', function() {
+        let numberOfClicks = localStorage.getItem('clickCounter');
         numberOfClicks++;
-        localStorage.setItem("clickCounter", numberOfClicks.toString());
+        localStorage.setItem('clickCounter', numberOfClicks);
         document.getElementById('target').innerHTML = numberOfClicks;
     });
 
