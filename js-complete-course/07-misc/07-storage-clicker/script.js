@@ -11,14 +11,22 @@
 
 (function() {
 
-    // get old storage if there, otherwise set a new one
+    let numberOfClicks;
+
+    // set new storage if first time, otherwise set counter
     if (localStorage.getItem("clickCounter") === null) {
-        lo
+        numberOfClicks = 0;
+        localStorage.setItem("clickCounter", numberOfClicks);
+    }
+    else {
+        document.getElementById('target').innerHTML = localStorage.getItem("clickCounter");
     }
 
-    let counter = document.getElementById('target').innerHTML;
+    // listen for clicks and increment counter
     document.getElementById('increment').addEventListener('click', function() {
-
+        numberOfClicks++;
+        localStorage.setItem("clickCounter", numberOfClicks.toString());
+        document.getElementById('target').innerHTML = numberOfClicks;
     });
 
 })();
