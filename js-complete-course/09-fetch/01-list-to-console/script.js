@@ -17,19 +17,15 @@
         // on click, fetch api and read to console
         fetch('../../_shared/api.json')
             .then(response => {
-                console.log(response);
                 return response.json();
             })
                 .then(data => {
-                console.log(data);
                 return data.heroes;
                 })
                     .then(objects => {
                         for (let obj in objects){
                             console.log(objects[obj]);
                         }
-                    })
-
+                    });
     });
-
 })();
