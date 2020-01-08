@@ -20,14 +20,14 @@
             .then(heroList => {
 
                 // Get variables that we will use often
-                let heroName = document.getElementById('hero-id').value;
+                let heroName = document.getElementById('hero-id').value.toLowerCase();
                 let xmenTemplate = document.getElementById('tpl-hero');
                 let xmenTemplateClone = xmenTemplate.content.cloneNode(true);
                 let heroToBeShown = null;
 
                 // set hero to be shown as a vairbale
                 for (let hero in heroList.heroes) {
-                    if (heroName == heroList.heroes[hero].name ) {
+                    if (heroName == heroList.heroes[hero].name.toLowerCase()) {
                         heroToBeShown = heroList.heroes[hero];
                         console.log(heroToBeShown);
                     }
@@ -40,9 +40,13 @@
                 }
 
                 // using the clone to set inner HTML
-                xmenTemplateClone.querySelector('.name').innerHTML = 'Name: ' + heroToBeShown.name;
-                xmenTemplateClone.querySelector('.alter-ego').innerHTML = 'Alter-Ego: ' + heroToBeShown.alterEgo;
-                xmenTemplateClone.querySelector('.powers').innerHTML = 'Powers: ' + heroToBeShown.abilities;
+                xmenTemplateClone.querySelector('.name').innerHTML = heroToBeShown.name + '</br>';
+                xmenTemplateClone.querySelector('.alter-ego').innerHTML = heroToBeShown.alterEgo;
+                xmenTemplateClone.querySelector('.powers').innerHTML += '<ul style="text-decoration: underline; padding-right: 50px;">Powers';
+                for (let i = 0; i < heroToBeShown.abilities.length; i++) {
+                    xmenTemplateClone.querySelector('.powers').innerHTML += '<li>' + heroToBeShown.abilities[i] + '</li>';
+                }
+                xmenTemplateClone.querySelector('.powers').innerHTML += '</ul>';
 
                 document.getElementById('target').appendChild(xmenTemplateClone);
 
