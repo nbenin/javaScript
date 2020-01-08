@@ -10,5 +10,32 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    // event listener
+    document.getElementById('run').addEventListener('click', function() {
+
+        // on click, fetch api and read to console
+        fetch('../../_shared/api.json')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                return data.heroes;
+            })
+            .then(objects => {
+
+                // get id to be removed
+                let idToBeRemoved = parseFloat(document.getElementById('hero-id').value);
+
+                // error check
+                if (isNaN(idToBeRemoved) || Number.isInteger(idToBeRemoved) === false || idToBeRemoved > 5 || idToBeRemoved < 1) {
+                    alert('please enter a real number between 1 and 5.');
+                    return;
+                }
+
+                // remove from array
+                objects.splice(idToBeRemoved - 1, 1)
+                console.log(objects);
+            });
+    });
 })();
