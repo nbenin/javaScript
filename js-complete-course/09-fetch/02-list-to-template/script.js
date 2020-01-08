@@ -38,12 +38,14 @@
                 for (let obj in data.heroes) {
                     nameNode[obj].innerHTML += data.heroes[obj].name + '</br>';
                     alterEgoNode[obj].innerHTML += data.heroes[obj].alterEgo;
-                    powersNode[obj].textContent += 'Powers: ';
+                    powersNode[obj].innerHTML += '<ul style="padding-right: 50px; text-decoration: underline;">Powers';
 
                     // loop for abilities
                     for (let pow = 0; pow < data.heroes[obj].abilities.length; pow++) {
-                        powersNode[obj].innerHTML += data.heroes[obj].abilities[pow] + '</br>';
+                        powersNode[obj].innerHTML += '<li>' + data.heroes[obj].abilities[pow] + '</li>';
                     }
+
+                    powersNode[obj].innerHTML += '</ul>';
                 }
             });
     });
